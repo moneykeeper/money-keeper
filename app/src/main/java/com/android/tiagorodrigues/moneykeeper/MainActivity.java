@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         UsernameEt = (EditText) findViewById(R.id.etUserName);
         PasswordEt = (EditText) findViewById(R.id.etPassword);
+        System.out.println("is git working?");
     }
 
     public void OnLogin(View view){
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         String password = PasswordEt.getText().toString();
         String type = "login";
         Connect connect = new Connect(this);
+
+
         connect.execute(type,username,password);
 
 
